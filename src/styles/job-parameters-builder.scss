@@ -1,0 +1,89 @@
+#silver-decisions {
+  .sd-job-parameters-builder{
+
+    .sd-help-icon{
+      opacity: 0.6;
+      cursor: help;
+      margin-left: 5px;
+      display: inline-block;
+      &:hover{
+        opacity: 1;
+      }
+    }
+
+    .sd-nested-parameters{
+      display: flex;
+      align-items: center;
+    }
+
+
+    .sd-job-parameter{
+      .input-group{
+        max-width: 150px;
+
+        select{
+          padding: 4px;
+        }
+
+        &.sd-derived-value{
+          margin-right: 7px;
+          input{
+            cursor: not-allowed
+          }
+        }
+      }
+      .input-group:not(.no-floating-label) select~label {
+        top: -.85em;
+      }
+      .sd-job-parameter-name{
+        margin-top: 20px;
+      }
+
+
+      .sd-job-parameter-values{
+        .sd-job-parameter{
+          display: inline-flex;
+          align-items: center;
+          margin-right: 7px;
+        }
+
+        .sd-job-parameter-value{
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &.sd-strict-validation, .sd-strict-validation{
+      .sd-job-parameter, &.sd-job-parameter{
+        &.invalid:not(.sd-pristine){
+          >.sd-job-parameter-name{
+            color: red;
+          }
+        }
+        .sd-job-parameter-value{
+          &.invalid:not(.sd-pristine){
+            background-color: rgba(255, 0, 0, 0.11);
+          }
+        }
+      }
+    }
+
+    &:not(.sd-strict-validation){
+
+      input, select{
+        &.invalid{
+          border-bottom: 1px solid rgba(0,0,0,.12);
+        }
+      }
+    }
+
+    .sd-pristine{
+      input, select{
+        border-bottom: 1px solid rgba(0,0,0,.12);
+      }
+    }
+  }
+
+}
+

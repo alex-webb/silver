@@ -1,0 +1,559 @@
+{
+    "toolbar": {
+        "newDiagram": "Nuovo diagramma",
+        "openDiagram": "Apri diagramma esistnte",
+        "saveDiagram": "Salva il diagramma corente",
+        "export":{
+            "label": "Esporta in",
+            "png": "Png",
+            "svg": "Svg",
+            "pdf": "Pdf"
+        },
+        "layout":{
+            "label": "Disposizione",
+            "manual": "Manuale",
+            "tree": "Albero",
+            "cluster": "Grappolo"
+        },
+        "viewMode": {
+            "label": "Vista",
+            "options": {
+                "criterion1":"Criterio 1",
+                "criterion2":"Criterio 2",
+                "twoCriteria":"Due criteri"
+            }
+        },
+        "objectiveRule":{
+            "label": "Regola",
+            "options": {
+                "expected-value-maximization":"max",
+                "expected-value-minimization":"min",
+                "maxi-min":"max-min",
+                "maxi-max":"max-max",
+                "mini-min":"min-min",
+                "mini-max":"min-max",
+                "min-max":"min-max",
+                "max-min":"max-min",
+                "min-min": "min-min",
+                "max-max": "max-max"
+            }
+        },
+        "undo": "Ripristina",
+        "redo": "Ripeti",
+        "settings": "Settaggi",
+        "about": "Di",
+        "sensitivityAnalysis": "Analisi di sensibilità",
+        "recompute": "Ricalcola"
+    },
+    "node":{
+        "name": "Etichetta"
+    },
+    "edge":{
+        "name": "Eticehtta",
+        "payoff": "Saldo",
+        "probability": "Probabilità"
+    },
+    "text":{
+        "value": "Testo"
+    },
+    "leagueTableDialog":{
+        "title": "Classifica",
+        "buttons": {
+            "downloadCsv": "Scarica CSV"
+        }
+    },
+    "leagueTable": {
+        "headers":{
+            "policyNo": "Regola #",
+            "policy": "Regola",
+            "comment": "Commento"
+        },
+        "comment":{
+            "dominatedBy": "dominata (da #{{policy}})",
+            "extendedDominatedBy": "estesa-dominata (da #{{policy1}} e #{{policy2}})",
+            "incratio": "rapporto incrementale={{incratio}}"
+        },
+        "plot":{
+            "groups":{
+                "highlighted": "Evidenziato",
+                "highlighted-default": "Raccomandato (per default WTP)",
+                "extended-dominated" : "Estesa-dominata",
+                "dominated": "Dominata",
+                "default": "Altro"
+            },
+            "tooltip":{
+                "gradientArrow1": "Direzione di {{name}} ottimizzazione",
+                "gradientArrow2": "Direzione di {{name}} ottimizzazione",
+                "dominatedRegion": "Regione dominata"
+            },
+            "legend":{
+                "dominatedRegion": "L'area grigia evidenzia la regione dominata",
+                "gradientArrows": "Le frecce indicano la direzione di miglioramento"
+            }
+        }
+    },
+    "sensitivityAnalysisDialog":{
+        "title": "Analisi di sensibilità",
+        "buttons": {
+            "runJob": "Esegui",
+            "stopJob": "Stop",
+            "terminateJob": "Esci",
+            "resumeJob": "Riprendi",
+            "downloadCsv": "Scaricare CSV",
+            "back": "Indietro",
+            "clear": "Cancella"
+        }
+    },
+    "jobParametersBuilder": {
+        "buttons": {
+            "removeParameterValue": "Cancella",
+            "addParameterValue": "Aggiungi"
+        }
+    },
+    "jobResultTable":{
+        "tooltip": {
+            "multiplePoliciesInCell": "{{number}} politiche"
+        },
+        "pivot": {
+            "aggregators":{
+                "maximum": "Massimo",
+                "minimum": "Minimo"
+            },
+            "renderers":{
+                "heatmap": "Mappa di calore"
+            }
+        },
+        "policyPreview": "Anteprima della politica"
+    },
+    "job":{
+        "sensitivity-analysis":{
+            "name": "Analisi di sensibilità multivariata",
+            "param":{
+                "ruleName": "Nome alla regola",
+                "extendedPolicyDescription": {
+                    "label": "Descrizione estesa della politica"
+                },
+                "variables": {
+                    "label": "Variabili",
+                    "name": {
+                        "label": "Nome"
+                    },
+                    "min": {
+                        "label": "Min"
+                    },
+                    "max": {
+                        "label": "Max"
+                    },
+                    "length": {
+                        "label": "Lunghezza"
+                    },
+                    "step": {
+                        "label": "Passo"
+                    }
+                }
+            },
+            "errors":{
+                "computations": "Errore nei calcoli di analisi di sensibilità per i seguenti parametri:"
+            },
+            "warnings": {
+                "largeScenariosNumber": "Numero di scenari definiti più grandi di {{numberFormatted}}. Analisi di sensibilità potrebbe non essere calcolata o essere molto lenta.",
+                "largeParametersNumber": "Numero di parametri maggiori di {{number}}. La visualizzazione dell'analisi di sensibilità potrebbe non riuscire o essere molto lenta."
+            }
+        },
+        "tornado-diagram":{
+            "name": "Diagramma a tornado",
+            "param":{
+                "ruleName": "Nome alla regola",
+                "extendedPolicyDescription": {
+                    "label": "Descrizione estesa della politica"
+                },
+                "variables": {
+                    "label": "Variabili",
+                    "name": {
+                        "label": "Nome"
+                    },
+                    "min": {
+                        "label": "Min"
+                    },
+                    "max": {
+                        "label": "Max"
+                    },
+                    "length": {
+                        "label": "Lunghezza"
+                    },
+                    "step": {
+                        "label": "Passo"
+                    },
+                    "defaultValue": {
+                        "label": "Valore predefinito"
+                    }
+                }
+            },
+            "errors":{
+                "computations": "Errore nei calcoli di analisi di sensibilità per i seguenti parametri:"
+            },
+            "warnings": {
+                "largeScenariosNumber": "Numero di scenari definiti più grandi di {{numberFormatted}}. Analisi di sensibilità potrebbe non essere calcolata o essere molto lenta.",
+                "largeParametersNumber": "Numero di parametri maggiori di {{number}}. La visualizzazione dell'analisi di sensibilità potrebbe non riuscire o essere molto lenta."
+            },
+            "plot":{
+                "legend":{
+                    "low": "Decresce",
+                    "high": "Cresce"
+                },
+                "xAxisTitle": "Saldo"
+            }
+        },
+        "probabilistic-sensitivity-analysis":{
+            "name": "Analisi di sensibilità probabilistica",
+            "param":{
+                "ruleName": "Nome alla regola",
+                "numberOfRuns": {
+                    "label": "Numero di operazioni"
+                },
+                "extendedPolicyDescription": {
+                    "label": "Descrizione estesa della politica"
+                },
+                "variables": {
+                    "label": "Variabili",
+                    "name": {
+                        "label": "Nome"
+                    },
+                    "formula": {
+                        "label": "Formula",
+                        "help": "Seleziona modello di formula dal menu o scrivi un codice personalizzato."
+                    }
+                }
+            },
+            "errors":{
+                "computations": "Errore nei calcoli di analisi di sensibilità per i seguenti parametri:",
+                "param-computation": "Errore di calcolo dei valori dei parametri:"
+            },
+            "warnings": {
+                "largeScenariosNumber": "Numero di scenari definiti più grandi di {{numberFormatted}}. Analisi di sensibilità potrebbe non riuscire o essere molto lenta."
+            }
+        },
+                "spider-plot": {
+            "name": "Diagramma di Kiviat",
+            "param": {
+                "ruleName": "Nome alla regola",
+                "extendedPolicyDescription": {
+                    "label": "Descrizione estesa della politica"
+                },
+                "percentageChangeRange": {
+                    "label": "+/- variazione percentuale da considerare"
+                },
+                "length": {
+                    "label": "Numero di valpri da testare",
+                    "help": "Numero di valpri da testare (in una parte della gamma)"
+                },
+                "variables": {
+                    "label": "Variabili",
+                    "name": {
+                        "label": "Nome"
+                    },
+                    "defaultValue": {
+                        "label": "Valore predefinito"
+                    }
+                }
+            },
+            "errors": {
+                "computations": "Errore nei calcoli di analisi di sensibilità per i seguenti parametri:"
+            },
+            "warnings": {
+                "largeScenariosNumber": "Numero di scenari definiti più grandi di {{numberFormatted}}. Analisi di sensibilità potrebbe non riuscire o essere molto lenta."
+            },
+            "plot": {
+                "legend": {},
+                "xAxisTitle": "Variazione percentuale",
+                "yAxisTitle": "Saldo"
+            }
+        },
+        "league-table":{
+            "name": "Classifica"
+        },
+        "errors":{
+            "generic": "Errore nei calcoli di analisi di sensibilità: {{message}}",
+            "params": "{{jobName}} parameteri errati"
+        }
+    },
+
+    "settingsDialog":{
+        "title": "Settaggi",
+        "general":{
+            "title": "Generale",
+            "fontSize": "Dimensione font",
+            "fontFamily": "Famiglia font",
+            "fontWeight": "Peso del font",
+            "fontStyle": "Stile font",
+            "numberFormatLocale": "Formato numero locale"
+        },
+        "payoff1":{
+            "title": "Formato saldo 1",
+            "currency": "Valuta",
+            "currencyDisplay": "Visualizzazione valuta",
+            "style": "Stile",
+            "minimumFractionDigits": "Numero minimo cifre frazione",
+            "maximumFractionDigits": "Numero massimo cifre frazione",
+            "useGrouping": "Usa separatori di gruppo"
+        },
+        "payoff2":{
+            "title": "Formato saldo 2",
+            "currency": "Valuta",
+            "currencyDisplay": "Visualizzazione valuta",
+            "style": "Stile",
+            "minimumFractionDigits": "Numero minimo cifre frazione",
+            "maximumFractionDigits": "Numero massimo cifre frazione",
+            "useGrouping": "Usa separatori di gruppo"
+        },
+        "probability":{
+            "title": "Formato probabilità",
+            "style": "Stile",
+            "minimumFractionDigits": "Numero minimo cifre frazione",
+            "maximumFractionDigits": "Numero massimo cifre frazione",
+            "fontSize": "Dimensione font",
+            "color": "Colore"
+        },
+        "node":{
+            "title": "Nodo",
+            "strokeWidth": "Spessore linea",
+            "optimal":{
+                "title": "Ottimale",
+                "stroke": "Colore",
+                "strokeWidth": "Spessore linea"
+            },
+            "label": {
+                "title": "Etichetta",
+                "fontSize": "Dimensione font etichetta",
+                "color": "Colore etichetta"
+            },
+            "payoff": {
+                "title": "Saldo",
+                "fontSize": "Dimensione font",
+                "color": "Colore",
+                "negativeColor": "Colore negativo"
+            },
+            "decision": {
+                "title": "Nodo dicisione",
+                "fill": "Colore riempimento",
+                "stroke": "Colore linea",
+                "selected": {
+                    "fill": "Colore riempimento selezionato"
+                }
+            },
+            "chance": {
+                "title": "Nodo opportunità",
+                "fill": "Colore riempimento",
+                "stroke": "Colore linea",
+                "selected": {
+                    "fill": "Colore riempimento selezionato"
+                }
+            },
+            "terminal":{
+                "title": "Nodo terminale",
+                "fill": "Colore riempimento",
+                "stroke": "Colore linea",
+                "selected": {
+                    "fill": "Colore riempimento selezionato"
+                },
+                "payoff": {
+                    "title": "Saldo",
+                    "fontSize": "Dimensione font",
+                    "color": "Colore",
+                    "negativeColor": "Colore negativo"
+                }
+            }
+        },
+        "edge":{
+            "title": "Ramo",
+            "stroke": "Colore",
+            "strokeWidth": "Larghezza linea",
+            "optimal":{
+                "title": "Ottimale",
+                "stroke": "Colore",
+                "strokeWidth": "Larghezza linea"
+            },
+            "selected":{
+                "title": "Selezionato",
+                "stroke": "Colore",
+                "strokeWidth": "Larghezza linea"
+            },
+            "label": {
+                "title": "Etichetta",
+                "fontSize": "Dimensione font",
+                "color": "Colore"
+            },
+            "payoff":{
+                "title": "Saldo",
+                "fontSize": "Dimensione font",
+                "color": "Colore",
+                "negativeColor": "Colore negativo"
+            }
+        },
+        "diagramTitle":{
+            "title": "Titolo diagramma",
+            "fontSize": "Dimensione font",
+            "fontWeight": "Peso del font",
+            "fontStyle": "Stile font",
+            "color": "Colore",
+            "margin":{
+                "title": "Margine",
+                "top": "Superiore",
+                "bottom": "Inferiore"
+            },
+            "description":{
+                "title": "Sotto-titolo (descrizione diagramma)",
+                "show": "Mostra",
+                "fontSize": "Dimensione font",
+                "fontWeight": "Peso del font",
+                "fontStyle": "Stile font",
+                "color": "Colore",
+                "marginTop": "Margine superiore"
+            }
+        },
+        "leagueTable": {
+            "title": "Classifica",
+            "plot": {
+                "title": "Grafico",
+                "maxWidth": "Larghezza massima",
+                "highlightedColor": "Colore evidenziato della regola",
+                "highlightedDefaultColor": "Colore polizza raccomandata (per default WTP)",
+                "extendedDominatedColor": "Colori della regola dominata estesa",
+                "dominatedColor": "Colore della denominata regola",
+                "defaultColor": "Altri criteri colore"
+            }
+        },
+        "other":{
+            "title": "Altro",
+            "disableAnimations": "Disabilita animazione",
+            "forceFullEdgeRedraw": "Forza ridisegno dei rami",
+            "hideLabels": "Nascondi le etichette",
+            "hidePayoffs": "Nascondi saldo",
+            "hideProbabilities": "Nascondi le probabilità",
+            "raw": "Non elaborato"
+        }
+    },
+    "aboutDialog":{
+        "title": "Informazioni"
+    },
+    "help":{
+        "header": "Aiuto",
+        "mouse": {
+            "header":"Azioni mouse:",
+            "list":{
+                "1": "Bottone sinistro: selezione nodo/ramo",
+                "2": "Bottone destro: menu di contesto (aggiunta/manipolazione nodi)",
+                "3": "Doppio click bottone sinistro: menu di contesto"
+            }
+        },
+        "keyboard": {
+            "header":"Scorciatoie tastiera:",
+            "list":{
+                "1": "Del: cancella nodi selezionati",
+                "2": "Ctrl-C/X: copia/taglia nodi selezionati",
+                "3": "Ctrl-V: incolla nodi copiati come sotto-albero di un nodo selezionato",
+                "4": "Ctrl-Y/Z: ripristina/ripeti",
+                "5": "Ctrl-Alt-D/C/T: aggiungi nuovo sottonodo Decisione/Opportunità/Terminale di un <strong>nodo selezionato</strong>",
+                "6": "Ctrl-Alt-D/C: inietta un nuovo nodo Decisione/Opportunità in un <strong>ramo selezionato</strong>"
+            }
+        },
+        "docs": "La documentazione di SilverDecisions e disponibile <a href=\"https://github.com/SilverDecisions/SilverDecisions/wiki/Documentation\" target=\"_blank\">qui</a>"
+    },
+    "definitionsDialog":{
+        "title": "Definizioni delle variabili",
+        "scope": {
+            "global": "raggio globale",
+            "node": "raggio di nodo e sotto-albero selezionati"
+        },
+        "buttons":{
+            "recalculate": "Ricalcolare"
+        },
+        "evaluatedVariables": "Variabili valutate"
+    },
+    "sidebarDefinitions":{
+        "scope":{
+            "label": "Raggio variabile:",
+            "global": "globale",
+            "node": "nodo e sotto-albero selezionati"
+        },
+        "header": "Variabili",
+        "code": "Codice",
+        "buttons":{
+            "openDialog" : "Apri il dialogo",
+            "recalculate": "Ricalcolare"
+        },
+        "evaluatedVariables": "Variabili valutate"
+    },
+    "multipleCriteria":{
+        "header": "Criteri multipli",
+        "defaultMaximizedCriterionName": "Effetto",
+        "defaultMinimizedCriterionName": "Costo",
+        "nameOfCriterion1": "Nome del criterio 1",
+        "nameOfCriterion2": "Nome del criterio 2",
+        "defaultCriterion1Weight": "Predefinito 1° peso criterio",
+        "weightLowerBound": "Peso inferiore limitato",
+        "weightUpperBound": "Peso superiore del limite",
+        "buttons":{
+            "showLeagueTable" : "Mostra la classifica",
+            "flip": "Ribalta"
+        }
+    },
+    "layoutOptions":{
+        "header": "Disposizione",
+        "marginHorizontal": "Margine orizzontale",
+        "marginVertical": "Margine verticale",
+        "nodeSize": "Dimensione nodo",
+        "edgeSlantWidthMax": "Inclinazione nodo",
+        "gridWidth": "Larghezza",
+        "gridHeight": "Altezza"
+    },
+    "diagramDetails":{
+        "header": "Dettagli",
+        "title" : "Titolo",
+        "description" : "Descrizione"
+    },
+    "objectProperties":{
+        "header":{
+            "node":{
+                "decision":"Nodo decisione",
+                "chance":"Nodo opportunità",
+                "terminal":"Nodo terminale"
+            },
+            "edge": "Ramo",
+            "text": "Testo mobile"
+        },
+        "childrenProperties":{
+            "node":{
+                "header": "Connessioni",
+                "child": {
+                    "header": "Ramo #{{number}}"
+                }
+            }
+        }
+    },
+    "confirm":{
+        "newDiagram": "Vuoi davvero cancellare ildiagramma corrente ? Tutti i dati non salvati saranno persi.",
+        "openDiagram": "Sei sicuro? Tutti i dati non salvati saranno persi.",
+        "beforeunload": "Sei sicuro di voler uscire da SilverDecisions ?Tutti i dati non salvati saranno persi."
+    },
+    "error":{
+        "jsonParse": "Errore analizzando il file !",
+        "fileApiNotSupported":"l'API di questo file non è ancora supportata in questo browser.  ",
+        "inputFilesProperty":"Il tuo browser non sembra supportare la proprieta del file di input.",
+        "notSilverDecisionsFile":"Non è un file SilverDecisions !",
+        "incorrectVersionFormat": "Formato non corretto della serie di versione!",
+        "fileVersionNewerThanApplicationVersion": "La versione in file è più recente rispetto alla versione dell'applicazione. Alcune funzionalità possono essere indisponibili.",
+        "objectiveComputationFailure": "Errore durante il calcolo obiettivo!",
+        "diagramDrawingFailure": "Errore durante il disegno della diagramma!",
+        "malformedData":"Errore durante la lettura dei dati dell'albero !",
+        "pngExportNotSupported": "L'esport in formato PNG non è supportata nel tuo browser.",
+        "pngExportNotSupportedIE": "L'esport in formato PNG non è supportata in Internet Explorer.",
+        "svgExportNotSupported": "L'esport in formato SVG non è supportata nel tuo browser.",
+        "pdfExportNotSupported": "L'esport in formato PDF non è supportata nel tuo browser.",
+        "incorrectPayoffNumberFormatOptions": "Opzioni per il formato dei saldi non corrette.",
+        "incorrectProbabilityNumberFormatOptions": "Opzioni per il formato delle probabilità non corrette.",
+        "incorrectNumberFormatOptions": "Opzioni per il formato dei numeri non corrette, utilizzo del default.",
+        "jsPDFisNotIncluded": "jsPDF non incluso !",
+        "serverSideExportRequestFailure": "Richiesta di export fallita lato server !"
+    }
+}

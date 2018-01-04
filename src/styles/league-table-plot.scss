@@ -1,0 +1,22 @@
+.sd-league-table-plot{
+  .odc-dominated-region{
+    opacity: 0.3;
+  }
+
+  $arrowColor: #424242;
+  .odc-gradient-arrow{
+    stroke-width: 4;
+    stroke: $arrowColor;
+    fill: $arrowColor;
+    opacity: 0.55;
+  }
+
+  .arrowHead{
+    stroke: $arrowColor;
+    fill: $arrowColor;
+  }
+
+  .odc-middle-incratio, .odc-low-incratio, .odc-high-incratio{
+    stroke-dasharray: 5 3;
+  }
+}
