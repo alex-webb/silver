@@ -6128,6 +6128,7 @@ exports.AppConfig = function AppConfig(custom) {
     this.showDetails = true;
     this.showDefinitions = true;
     this.jsonFileDownload = true;
+    this.jsonDataSendAzure = true;
     this.width = undefined;
     this.height = undefined;
     this.rule = "expected-value-maximization";
@@ -7075,6 +7076,36 @@ var App = exports.App = function () {
                 if (_this16.config.jsonFileDownload) {
                     var blob = new Blob([json], { type: "application/json" });
                     _exporter.Exporter.saveAs(blob, _exporter.Exporter.getExportFileName('json'));
+                }
+            });
+        }
+    }, {
+        key: "sendToAzure",
+        value: function sendToAzure() {
+            var filterLocation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+            var _this16 = this;
+
+            var filterComputed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+            var filterPrivate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+            this.serialize(filterLocation, filterComputed, filterPrivate).then(function (json) {
+                _appUtils.AppUtils.dispatchEvent('SilverDecisionsSaveEvent', json);
+                if (_this16.config.jsonDataSendAzure) {
+                    var blob = new Blob([json], { type: "application/json" });
+
+                    $.ajax({
+                        url: 'Ajax.ashx',
+                        type: 'POST',
+                        data: JSON.stringify(arr),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        async: false,
+                        success: function(msg) {
+                            alert(msg);
+                        }
+                    });
+
                 }
             });
         }
@@ -16473,9 +16504,20 @@ var Toolbar = exports.Toolbar = function () {
             if (!this.app.config.exports.show) {
                 return;
             }
+            this.initExportToAzureButton();
             this.initExportToPngButton();
             this.initExportSvgButton();
             this.initExportPdfButton();
+        }
+    }, {
+        key: 'initExportToAzureButton',
+        value: function initExportToAzureButton() {
+            var _this8 = this;
+
+            var svg = this.app.treeDesigner.svg;
+            this.container.select('#saveButtonAzure').on('click', function () {
+                return _exporter.Exporter.sendToAzure(svg, _this8.app.config.exports);
+            }).classed(this.hiddenClass, !this.app.config.buttons.exportToPng);
         }
     }, {
         key: 'initExportToPngButton',

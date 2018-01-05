@@ -5,6 +5,7 @@
         "saveDiagram": "Save current diagram",
         "export":{
             "label": "Export to",
+            "azure": "Azure",
             "png": "Png",
             "svg": "Svg",
             "pdf": "Pdf"

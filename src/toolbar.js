@@ -156,10 +156,17 @@ export class Toolbar{
         if(!this.app.config.exports.show){
             return;
         }
+        this.initExportToAzureButton();
         this.initExportToPngButton();
         this.initExportSvgButton();
         this.initExportPdfButton();
 
+    }
+    initExportToAzureButton() {
+        var svg = this.app.treeDesigner.svg;
+        this.container.select('#saveButtonAzure')
+            .on('click', () => Exporter.sendToAzure(svg, this.app.config.exports))
+            .classed(this.hiddenClass, !this.app.config.buttons.exportToPng)
     }
     initExportToPngButton() {
         var svg = this.app.treeDesigner.svg;
